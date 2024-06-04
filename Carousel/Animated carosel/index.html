@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>
+        Carousel Slider
+    </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.green.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <style>
+        .item img {}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="img/1.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img/2.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img/3.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img/4.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img/5.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img/6.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img/7.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img/8.jpg" alt="">
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.owl-carousel').owlCarousel({
+                merge: true,
+                loop: true,
+                margin: 10,
+                nav: true,
+                autoplay: true,
+                items: 1,
+                animateOut: 'slideOutDown',
+                animateIn: 'fadeInLeftBig',
+                // autoplayTimeout: 2000,
+                // autoplayHoverPause: true,
+                // rtl: false,  // right to left
+                // autoHeight: true,
+
+            })
+        })
+    </script>
+</body>
+
+</html>
