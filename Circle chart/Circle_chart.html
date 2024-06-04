@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>
+        Circle Chart
+    </title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .perc {
+            font-size: 30px !important;
+            color: #A3CB38;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Circle-box ">
+        <h2 class="m-4 text-center">
+            Circle progress Bar
+        </h2>
+        <div class="progress-circle d-flex justify-content-center ">
+            <div class="demo1 m-4 text-center" data-percent="65">Jquery</div>
+            <div class="demo2 m-4 text-center" data-percent="75">CSS</div>
+            <div class="demo3 m-4 text-center" data-percent="85">Boostrap</div>
+            <div class="demo4 m-4 text-center" data-percent="95">HTML</div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="jquery.circlechart.js"></script>
+    <script>
+        $('.demo1').percentcircle({
+
+            animate: true,
+            diameter: 100,
+            guage: 2,
+            coverBg: '#fff',
+            bgColor: '#efefef',
+            fillColor: '#C4E538',
+            percentSize: '15px',
+            percentWeight: 'normal'
+
+        });
+        $('.demo2').percentcircle({
+
+            animate: true,
+            diameter: 100,
+            guage: 2,
+            coverBg: '#fff',
+            bgColor: '#efefef',
+            fillColor: '#5758BB',
+            percentSize: '15px',
+            percentWeight: 'normal'
+
+        });
+        $('.demo3').percentcircle({
+
+            animate: true,
+            diameter: 100,
+            guage: 2,
+            coverBg: '#fff',
+            bgColor: '#efefef',
+            fillColor: '#1289A7',
+            percentSize: '15px',
+            percentWeight: 'normal'
+
+        });
+        $('.demo4').percentcircle({
+
+            animate: true,
+            diameter: 100,
+            guage: 2,
+            coverBg: '#fff',
+            bgColor: '#efefef',
+            fillColor: '#EE5A24',
+            percentSize: '15px',
+            percentWeight: 'normal'
+
+        });
+    
+        // Plugin link 
+        // https://goo.gl/uFFrVB
+    </script>
+</body>
+
+</html>
