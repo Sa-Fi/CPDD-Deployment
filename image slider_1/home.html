@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Image slider 1</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- link css  -->
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <div id="slider">
+        <div class="dp-wrap">
+            <div id="dp-slider">
+
+                <div class="dp_item" data-class="1" data-position="1">
+                    <div class="dp-content">
+
+                        <h2>Slide 1</h2>
+                        <p> This is Slide 1 </p>
+                        <a href="#" class="site-btn">Read More…</a>
+                    </div>
+                    <div class="dp-img">
+                        <img class="img-fluid" src="1.jpg" alt="investing">
+                    </div>
+                </div>
+
+                <div class="dp_item" data-class="2" data-position="2">
+                    <div class="dp-content">
+
+                        <h2>Slide 2</h2>
+                        <p> This is Slide 2 </p>
+                        <a href="#" class="site-btn">Read More…</a>
+                    </div>
+                    <div class="dp-img">
+                        <img class="img-fluid" src="2.jpg" alt="investing">
+                    </div>
+                </div>
+
+                <div class="dp_item" data-class="3" data-position="3">
+                    <div class="dp-content">
+
+                        <h2>Slide 3</h2>
+                        <p> This is Slide 3 </p>
+                        <a href="#" class="site-btn">Read More…</a>
+                    </div>
+                    <div class="dp-img">
+                        <img class="img-fluid" src="3.jpg" alt="investing">
+                    </div>
+                </div>
+
+                <div class="dp_item" data-class="4" data-position="4">
+                    <div class="dp-content">
+
+                        <h2>Slide 4</h2>
+                        <p> This is Slide 4 </p>
+                        <a href="#" class="site-btn">Read More…</a>
+                    </div>
+                    <div class="dp-img">
+                        <img class="img-fluid" src="4.jpg" alt="investing">
+                    </div>
+                </div>
+            </div>
+
+            <span id="dp-next">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.401 51.401">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                                stroke: #fa8c8c;
+                                stroke-miterlimit: 10;
+                                stroke-width: 7px;
+                            }
+                        </style>
+                    </defs>
+                    <path id="Rectangle_4_Copy" data-name="Rectangle 4 Copy" class="cls-1" d="M32.246,0V33.178L0,31.953"
+                        transform="translate(0.094 25.276) rotate(-45)" />
+                </svg>
+            </span>
+
+            <span id="dp-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.401 51.401">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                                stroke: #fa8c8c;
+                                stroke-miterlimit: 10;
+                                stroke-width: 7px;
+                            }
+                        </style>
+                    </defs>
+                    <path id="Rectangle_4_Copy" data-name="Rectangle 4 Copy" class="cls-1" d="M32.246,0V33.178L0,31.953"
+                        transform="translate(0.094 25.276) rotate(-45)" />
+                </svg>
+            </span>
+
+
+
+            <ul id="dp-dots">
+                <li data-class="1" class="active"></li>
+                <li data-class="2"></li>
+                <li data-class="3"></li>
+                <li data-class="4"></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- https://www.jqueryscript.net/slider/3D-Stack-Card-Slider.html -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script>
+        jQuery(document).ready(function () {
+
+            function detect_active() {
+                // get active
+                var get_active = $("#dp-slider .dp_item:first-child").data("class");
+                $("#dp-dots li").removeClass("active");
+                $("#dp-dots li[data-class=" + get_active + "]").addClass("active");
+            }
+            $("#dp-next").click(function () {
+                var total = $(".dp_item").length;
+                $("#dp-slider .dp_item:first-child").hide().appendTo("#dp-slider").fadeIn();
+                $.each($('.dp_item'), function (index, dp_item) {
+                    $(dp_item).attr('data-position', index + 1);
+                });
+                detect_active();
+
+            });
+
+            $("#dp-prev").click(function () {
+                var total = $(".dp_item").length;
+                $("#dp-slider .dp_item:last-child").hide().prependTo("#dp-slider").fadeIn();
+                $.each($('.dp_item'), function (index, dp_item) {
+                    $(dp_item).attr('data-position', index + 1);
+                });
+
+                detect_active();
+            });
+
+            $("#dp-dots li").click(function () {
+                $("#dp-dots li").removeClass("active");
+                $(this).addClass("active");
+                var get_slide = $(this).attr('data-class');
+                console.log(get_slide);
+                $("#dp-slider .dp_item[data-class=" + get_slide + "]").hide().prependTo("#dp-slider").fadeIn();
+                $.each($('.dp_item'), function (index, dp_item) {
+                    $(dp_item).attr('data-position', index + 1);
+                });
+            });
+
+
+            $("body").on("click", "#dp-slider .dp_item:not(:first-child)", function () {
+                var get_slide = $(this).attr('data-class');
+                console.log(get_slide);
+                $("#dp-slider .dp_item[data-class=" + get_slide + "]").hide().prependTo("#dp-slider").fadeIn();
+                $.each($('.dp_item'), function (index, dp_item) {
+                    $(dp_item).attr('data-position', index + 1);
+                });
+
+                detect_active();
+            });
+        });
+    </script>
+</body>
+
+</html>
