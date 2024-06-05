@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(19, 1, 1);
+}
+.item-menu {
+  text-align: center;
+  margin: 30px auto;
+}
+.item-menu ul li {
+  list-style: none;
+  padding: 12px 15px;
+  display: inline-block;
+  border: 1px solid tomato;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 15px;
+  color: white;
+}
+.item-menu ul li:hover,
+.item-menu ul li:active {
+  background: tomato;
+  color: white;
+}
+.item-details {
+  width: 100%;
+}
+.item-details img {
+  width: 100%;
+}
+.item-details .item {
+  margin: 10px 0 !important;
+}
